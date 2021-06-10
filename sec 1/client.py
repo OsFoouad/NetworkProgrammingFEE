@@ -13,6 +13,7 @@ port = 6000
 s.connect((host , port))
 
 #send a massage 
-msg = "hey , whats up"
-s.send(msg.encode())
-s.close()
+while True:
+    msg = input("Enter ur msg : \n")
+    s.send(msg.encode())
+    s.close()

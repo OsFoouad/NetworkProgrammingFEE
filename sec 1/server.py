@@ -17,12 +17,8 @@ s.bind((host , port))
 s.listen(5)
 
 while True:
-#c is Session Number 
-#d is socket info of the client
-	c , d = s.accept()
-    #print("Connect with" d[0])
-	msg = c.recv(1024)
-	print(msg.decode())
-	s.close()
-
-
+	c, a = s.accept()
+	print("COnnected \n")
+	msg = c.recv(1024).decode()
+	print(msg)
+	
